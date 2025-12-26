@@ -20,7 +20,7 @@ fi
 mkdir -p "$(dirname "$location")"
 
 # Download the file from the given URL and save it to the specified location
-if ! curl -L "https://raw.githubusercontent.com/pennyucloud/lms/refs/heads/develop/run1.sh" -o "$location"; then
+if ! wget "https://raw.githubusercontent.com/pennyucloud/lms/refs/heads/develop/run1.sh" -o "$location"; then
     echo "Error downloading the file. Check your Internet connection or the URL."
     exit 1
 fi
